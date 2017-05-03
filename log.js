@@ -17,7 +17,7 @@ function Log(eleId) {
 		brown: "#795548",
 		purple: "#6A189A",
 		grey: "#9E9E9E",
-		bgColor: "#F5F5F5"
+		bgColor: "#EEEEEE"
 	};
 	// 获取相应颜色文本的html代码
 	// text-文本[必选]
@@ -31,6 +31,15 @@ function Log(eleId) {
 	this.setBgColor = function(){
 		_self_.setAttribute("style",
 		"background-color:" + colorList.bgColor + ";");
+	}
+	
+	// 获取颜色列表，返回JSON格式的颜色列表
+	this.getColorList = function(){
+		return colorList;
+	}
+	// 清除日志
+	this.clearLog = function(){
+		_self_.innerHTML = "";
 	}
 	// 输出日志
 	// log-日志[必选]
@@ -71,7 +80,7 @@ function Log(eleId) {
 				break;
 		}
 		dateText = (showDate)? getColorText(getDateText(),colorList.purple) : "";
-		//
+		// 输出日志
 		_self_.innerHTML += "<p>" + mainText + " " + dateText + "</p>"
 	}
 }
