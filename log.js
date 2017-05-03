@@ -81,6 +81,6 @@ function Log(eleId) {
 		}
 		dateText = (showDate)? getColorText(getDateText(),colorList.purple) : "";
 		// 输出日志
-		_self_.innerHTML += "<p>" + mainText + " " + dateText + "</p>"
+		_self_.innerHTML += "<p>" + dateText + " " + mainText + "</p>"
 	}
 }
